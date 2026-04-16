@@ -1,3 +1,5 @@
+import { Circuit } from "./Circuit";
+
 export const MyComposition = () => {
-  return null;
+  return <Circuit />;
 };
