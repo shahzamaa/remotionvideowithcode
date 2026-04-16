@@ -142,22 +142,7 @@ const AdvancedChart: React.FC<{ delay?: number }> = ({ delay = 0 }) => {
     );
 };
 
-const CustomQuantumLogo: React.FC = () => {
-    return (
-        <svg width="300" height="300" viewBox="0 0 400 400">
-            {/* Hexagon Outline */}
-            <path d="M 200 20 L 360 100 L 360 300 L 200 380 L 40 300 L 40 100 Z" fill="none" stroke={COLOR_GOLD} strokeWidth="6" />
-            {/* Abstract Tech Brain / M shape */}
-            <path d="M 120 180 Q 150 120 200 120 Q 250 120 280 180 M 150 180 L 175 140 L 200 180 L 225 140 L 250 180" fill="none" stroke={COLOR_GOLD} strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
-            {/* Brand Text */}
-            <text x="200" y="250" fontSize="55" fill={COLOR_GOLD} fontWeight="900" textAnchor="middle" fontFamily="'Inter', sans-serif">Quantum</text>
-            <text x="200" y="300" fontSize="45" fill={COLOR_GOLD} fontWeight="600" textAnchor="middle" fontFamily="'Inter', sans-serif">Algo</text>
-            {/* Upward Chart Arrow */}
-            <path d="M 80 340 L 150 280 L 220 310 L 320 210" fill="none" stroke={COLOR_GOLD} strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M 280 210 L 320 210 L 320 250" fill="none" stroke={COLOR_GOLD} strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-    )
-}
+
 
 export const AdvancedReel: React.FC = () => {
   const { fps } = useVideoConfig();
@@ -188,7 +173,7 @@ export const AdvancedReel: React.FC = () => {
             <div style={{
                 transform: `scale(${spring({ frame, fps, config: { damping: 12, stiffness: 150 } })})`
             }}>
-                <CustomQuantumLogo />
+                <Img src={staticFile("logo.png")} style={{ width: 400, height: 'auto' }} />
             </div>
             <div style={{ height: 40 }} />
             <TitleText text="INSTITUTIONAL" delay={5} exitDelay={105} size={70} color={COLOR_DARK} />
@@ -230,7 +215,7 @@ export const AdvancedReel: React.FC = () => {
             <div style={{
                 transform: `scale(${spring({ frame, fps, config: { damping: 12, stiffness: 150 } })})`
             }}>
-                <CustomQuantumLogo />
+                <Img src={staticFile("logo.png")} style={{ width: 400, height: 'auto' }} />
             </div>
             <div style={{ height: 20 }} />
             <TitleText text="SCALE YOUR PORTFOLIO" size={60} delay={5} exitDelay={110} />

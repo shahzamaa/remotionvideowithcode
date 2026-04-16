@@ -4,10 +4,19 @@ import { MyComposition } from "./Composition";
 import { TradingVideo } from "./TradingVideo";
 import { PromotionVideo } from "./PromotionVideo";
 import { AdvancedReel } from "./AdvancedReel";
+import { LifeChangeReel } from "./LifeChangeReel";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="LifeChangeReel"
+        component={LifeChangeReel}
+        durationInFrames={750} // 25 seconds
+        fps={30}
+        width={1080}
+        height={1920}
+      />
       <Composition
         id="AdvancedReel"
         component={AdvancedReel}
