@@ -5,7 +5,6 @@ import {
   useCurrentFrame,
   useVideoConfig,
   Easing,
-  Sequence,
   Series,
 } from "remotion";
 
@@ -13,7 +12,6 @@ const COLOR_GOLD = "#C5A059";
 const COLOR_DARK = "#F9FAFB"; // Main Background (White-ish)
 const COLOR_ACCENT = "#D4AF37";
 const COLOR_WHITE = "#111827"; // Main Text (Dark)
-const COLOR_CIRCUIT = "rgba(197, 160, 89, 0.1)"; // Subtle gold lines
 
 // Reusable animated text component with a premium feel
 const PremiumText: React.FC<{
@@ -173,6 +171,7 @@ const SimpleChart: React.FC<{ color: string }> = ({ color }) => {
 };
 
 export const PromotionVideo: React.FC = () => {
+  const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
   return (
@@ -259,8 +258,8 @@ export const PromotionVideo: React.FC = () => {
         </Series.Sequence>
       </Series>
 
-      {/* Global Glitch/Scanline effect for transitions */}
-      {Math.random() > 0.98 && (
+      {/* Global Glitch/Scanline effect for transitions (Deterministic) */}
+      {frame % 45 === 0 && (
           <AbsoluteFill style={{ backgroundColor: COLOR_GOLD, opacity: 0.1, zIndex: 100 }} />
       )}
     </AbsoluteFill>

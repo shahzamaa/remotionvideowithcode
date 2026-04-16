@@ -1,11 +1,9 @@
-import React from "react";
 import {
   AbsoluteFill,
   interpolate,
   useCurrentFrame,
   useVideoConfig,
   Easing,
-  Sequence,
   Series,
 } from "remotion";
 
@@ -126,7 +124,7 @@ const RankingCard: React.FC<{
 
 export const TradingVideo: React.FC = () => {
   const frame = useCurrentFrame();
-  const { fps, width, height } = useVideoConfig();
+  const { fps } = useVideoConfig();
 
   // Background audio (conceptual, would be added via <Audio> tag)
   

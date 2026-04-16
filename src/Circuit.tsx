@@ -87,7 +87,7 @@ const DataPulse: React.FC<{ path: string; delay: number; duration: number }> = (
 };
 
 export const Circuit: React.FC = () => {
-  const { width, height, fps } = useVideoConfig();
+  const { width, height } = useVideoConfig();
   const frame = useCurrentFrame();
 
   const paths = useMemo(() => {
