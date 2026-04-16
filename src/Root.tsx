@@ -3,10 +3,19 @@ import { Composition } from "remotion";
 import { MyComposition } from "./Composition";
 import { TradingVideo } from "./TradingVideo";
 import { PromotionVideo } from "./PromotionVideo";
+import { AdvancedReel } from "./AdvancedReel";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="AdvancedReel"
+        component={AdvancedReel}
+        durationInFrames={540} // 18 seconds
+        fps={30}
+        width={1080}
+        height={1920}
+      />
       <Composition
         id="PromotionVideo"
         component={PromotionVideo}

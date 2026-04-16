@@ -24,6 +24,8 @@
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
+    "render-promo": "remotion render PromotionVideo out/promotion.mp4",
+    "render-advanced": "remotion render AdvancedReel out/AdvancedReel.mp4",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc"
   },
